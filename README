@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------
+#
+# R functions to manipulate gait data from TUG tests
+#
+# Author: Moacir A. Ponti
+# -> in collaboration with: Patricia Bet; Paula Castro
+#
+# There are two types of files in this repository:
+#
+# 1. Code
+#
+# - gaitAnalysis.R : contains several functions to 
+#                  read text files with accelerometer data
+#		   and performing feature extraction
+#
+# - featureROCAnalysis.R: contains functions to allow
+#		   performing ROC curve analysis using the
+#		   extracted features or any other variable
+#
+#   in order to load the code files use following R commands:
+#   > source('gaitAnalysis.R')
+#   > source('featureROCAnalysis.R')
+#
+# - plotSS_fusionROC.R: code used to plot ROC curves and
+#		   Sensitivity vs Specificity analysis that
+#		   are included in the paper
+#
+# 2. Object files:
+#
+# - featCompleteTUG_44.rds: R object containing all features, 
+#		   anonymized IDs and the group labels for each
+#		   participant
+#
+# - featSignificantTUG_7.rds: R object containing only the 
+#		   features that were found to be significant with
+#		   respect to the different groups, containing also
+#                  the group labels for each participant
+#
+# - featSecondsTUG_3.rds: R object containing the time spent by
+#		   the participants while performing each TUG
+#
+# - featFusionFeatsDists_2.rds: result of the fusion of the Frequency 
+#		   and Distance-based features.
+#
+# - featFusionTUGS_1.rds: result of the fusion of the TUG seconds#
+#
+#   in order to load some feature data, use the following R command:
+#   > feats <- readRDS("file.rds")
+#
+#
+# This repository was made public in order to allow for
+#	reproducibility of the results reported in the paper
+#
+#	M. Ponti, P. Bet, C.L. Oliveira and P.C. Castro
+#	"Better than Counting Seconds: Identifying Fallers among 
+#	 Healthy Elderly using Fusion of Accelerometer Features and 
+#	 Dual-Task Timed Up and Go"
+#
+#	the paper is currently accepted and in production at PLoS ONE
+#
+#	a preprint version can be found in the following arXiV link:
+#       OBS: note that the arXiV paper can different from the one
+#	     submitted
+#	https://arxiv.org/abs/1609.05339
+#
+# ------------------------------------------------------------------
